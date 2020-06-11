@@ -8,7 +8,9 @@ For more detail, you could see the vocabulary.xlsx file I uploaded.
 
 In the dist file I also packed the code into a .exe file so you could run it directly if you want. Nonetheless, please pay attention to change path of you vocabulary.xlsx since the path in my code is E:\TOEFL\vocabulary.xlsx. You have to change the path in the code and repack it provided you don't want to use the same path as mine.
 
-To pack the code, the convience way to achieve it is to enter 
+To pack the code, the convience way to achieve it is to use
+
 pyinstaller -F YOUR_PATH/vocabulary.xlsx
+
 Then there will be two file created. Ignore the build file, the .exe file will be in the dist.
 
