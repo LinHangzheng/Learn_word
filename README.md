@@ -12,5 +12,5 @@ To pack the code, the convience way to achieve it is to use
 
 pyinstaller -F YOUR_PATH/vocabulary.xlsx
 
-Then there will be two file created. Ignore the build file, the .exe file will be in the dist.
+Then there will be two folders created. Ignore the build folder, the .exe file will be in the dist.
 
