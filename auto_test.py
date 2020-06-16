@@ -43,7 +43,7 @@ def list_str_to_int(List):
 # loop works until key 'q' is pressed
 while (1):
     # load the xlsx file
-    data = xlrd.open_workbook('E:/TOEFL/vocabulary.xlsx')
+    data = xlrd.open_workbook('E:/TOEFL/vocabulary.xls')
 
     # for each sheet, create a list of vocabulary, each word and its
     # meaning are packed in a tuple (word, meaning, time)
@@ -102,7 +102,7 @@ while (1):
         
         # if you don't konw the word, press 1
         if (know == '1'):
-            List[i] = (List[i][0],List[i][1],List[i][2]+1, List[i][3]+1)
+            List[i] = (List[i][0],List[i][1],List[i][2]+1, 1)
             print (List[i][1],' ',List[i][2])
             
         # if you know the word, press 0
@@ -113,7 +113,7 @@ while (1):
         # if you find the last check is wrong, press d and set the last 
         # word as unknow
         elif (i >0 and know == 'd'):
-            List[i-1]= (List[i-1][0],List[i-1][1],List[i-1][2]+1,List[i-1][3]+2)
+            List[i-1]= (List[i-1][0],List[i-1][1],List[i-1][2]+1,1)
             print (List[i-1][0],' ', List[i-1][1],' ',List[i-1][2])   
             i = i-1
             
