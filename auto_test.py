@@ -7,10 +7,7 @@ from os.path import join
 from xlutils.copy import copy
 
 # list_n: total vocabulary sheets
-# not_in_xlsx: the first 6 sheet are not included, the xlsx file starts
-# from list 7
 list_n = 40
-not_in_xlsx = 6
 vocabulary_array = {}
 
 def is_number(s):
@@ -57,7 +54,7 @@ while (1):
         voc = []
         for i in range (len(words)):
             voc.append((words[i],paraphrase[i],0,count[i]))
-        vocabulary_array[sheet_n+not_in_xlsx] = voc
+        vocabulary_array[sheet_n] = voc
         
     while (1):
         list_n = input('List = (press \'q\' to quit)')
@@ -69,8 +66,8 @@ while (1):
             continue
 
         # check whether the input number is within the list range
-        if (int(list_n)<7 or int(list_n)>40):
-            print('please enter a number between 7-40')
+        if (int(list_n)<1 or int(list_n)>40):
+            print('please enter a number between 1-40')
             continue
         break
 
@@ -166,8 +163,8 @@ while (1):
 
     w = copy(data)
     for i in range (len(List)):
-        w.get_sheet(list_n-not_in_xlsx).write(i+1,0,List[i][3])
-        w.get_sheet(list_n-not_in_xlsx).write(i+1,1,List[i][0])
-        w.get_sheet(list_n-not_in_xlsx).write(i+1,2,List[i][1])
+        w.get_sheet(list_n).write(i+1,0,List[i][3])
+        w.get_sheet(list_n).write(i+1,1,List[i][0])
+        w.get_sheet(list_n).write(i+1,2,List[i][1])
     w.save('E:/TOEFL/vocabulary.xls')
 
