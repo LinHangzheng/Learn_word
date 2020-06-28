@@ -6,7 +6,7 @@ Here I proved my vocabulary.xlsx file. You can modify it as you want.
 The frist row is the title and the words will start from the second row and second column.
 For more detail, you could see the vocabulary.xls file I uploaded.
 
-In the dist file I also packed the code into a .exe file so you could run it directly. Nonetheless, please pay attention to change path of you vocabulary.xls since the path in my code is E:\TOEFL\vocabulary.xls. You have to change the path in the code and repack it provided you don't want to use the same path as mine.
+In the dist file I also packed the code into a .exe file so you could run it directly. 
 
 To pack the code, the convience way to achieve it is to use
 

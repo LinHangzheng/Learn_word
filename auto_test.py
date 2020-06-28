@@ -3,6 +3,7 @@ import xlrd
 import xlwt
 import sys
 import random
+import os
 from os.path import join
 from xlutils.copy import copy
 
@@ -40,7 +41,8 @@ def list_str_to_int(List):
 # loop works until key 'q' is pressed
 while (1):
     # load the xlsx file
-    data = xlrd.open_workbook('E:/TOEFL/vocabulary.xls')
+    path = os.path.dirname(os.getcwd())
+    data = xlrd.open_workbook(path+'/vocabulary.xls')
 
     # for each sheet, create a list of vocabulary, each word and its
     # meaning are packed in a tuple (word, meaning, time)
