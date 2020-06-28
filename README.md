@@ -10,7 +10,7 @@ In the dist file I also packed the code into a .exe file so you could run it dir
 
 To pack the code, the convience way to achieve it is to use
 
-pyinstaller -F YOUR_PATH/vocabulary.xls
+pyinstaller -F YOUR_PATH/auto_test.py
 
 Then there will be two folders created. Ignore the build folder, the .exe file will be in the dist.
 
